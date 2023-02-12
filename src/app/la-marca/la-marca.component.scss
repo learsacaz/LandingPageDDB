@@ -1,0 +1,744 @@
+$ancho100: 100%;
+$alto100: 100%;
+@mixin displayCentrado{
+    justify-content: center;
+    align-items: center;
+}
+@mixin textoCentrado{
+    text-align: center;
+}
+
+.contenedor, p{
+    color: rgb(214, 214, 214);
+    font:{
+        family: 'Roboto';
+        weight:100 !important;
+    }
+}
+.contenedor{
+    margin-top: 75px;
+}
+.bgP{
+    padding: 0px 400px ;
+}
+.titulo1{
+    height: 55px;
+    width: 200px;
+    border-left: 2px solid white;
+}
+.titulo2{
+    height: 65px;
+    width: 400px;
+    border-bottom: 2px dashed white;
+}
+.contenido1{
+    height: 135px;
+    width: 270px;
+    margin-left: 35px;
+}
+.section2Imgs{
+    height: 59vw;
+    margin-top: -170px;
+    width: $ancho100;
+    overflow: hidden;
+}
+.img1{
+    /*width: 800px;*/
+    width: 43vw;
+    margin-top: -167px;
+    margin-left: -27px;
+    animation:{
+        name: desplazarI;
+        duration: 3s;
+        timing-function: linear ease-in;
+    }
+}
+.img2{
+    width: 13vw;
+    margin-top: 190px;
+    margin-left: -50px;
+}
+.img3{
+    /*width: 1140px;*/
+    width: 62vw;
+    animation:{
+        name: desplazarD;
+        duration: 3s;
+        timing-function: linear ease-in;
+    }
+}
+.textImagenes{
+    color: black;
+    font:{
+        weight: 400 !important;
+        size: 23px;
+    }
+    letter-spacing: 0.5vw;
+    width: 35vw;
+    border-right: 2px solid black;
+}
+.pTextImagenes{
+    padding: 0px 400px;
+}
+.gridUltimaSection{
+    display: grid;
+    padding: 0px 300px;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+}
+.element1,.element3,.element2,.element4{
+    justify-self: center;
+    align-self: center;
+}
+.element1,.element3{
+    grid-column: 1/2;
+}
+.element2,.element4{
+    grid-column: 2/3;
+}
+.element1{
+    display: flex;
+    height: 10vw;
+    @include displayCentrado();
+    padding: 0px 70px;
+    letter-spacing: 0.2vw;
+    grid-row: 1/1;
+    font-size: 1vw;
+}
+.element2{
+    grid-row: 1/3;
+    letter-spacing: 0.2vw;
+    padding: 2vw 3vw 0px 3vw;
+    font-size: 1vw;
+}
+.element3{
+    grid-row: 2/5;
+}
+.element4{
+    grid-row: 3/5;
+    padding-right: 215px;
+    p, h2{
+        color: rgb(48, 48, 48);
+    }
+    h2{
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 1.8vw;
+    }
+    p{
+        font-size: 1vw;
+    }
+}
+.imgGrid{
+    width: 25vw;
+    animation:{
+        name: desplazarD;
+        duration: 3s;
+        timing-function: linear ease-in;
+    }
+}
+.imgInfo{
+    width: $ancho100;
+    height: 24vw;
+    background: url("../../assets/imagenes/bg-asset-2.png") center;
+    background-size: cover;
+}
+.element5{
+    padding: 0px 50px;
+    grid-column: 1/3;
+    grid-row: 5/7;
+    margin-top: 4vw;
+    letter-spacing: 0.3vw;
+    h2, p{
+        color: rgb(48, 48, 48);
+    }
+    div{
+        color: rgb(48, 48, 48) !important;
+        height: 3vw;
+        align-self: center;
+        letter-spacing: 0.2vw;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 49% 49.5%;
+        gap: 1rem;
+    }
+    input, select{
+        color: #757575;
+        height: 3vw;
+        align-self: center;
+        padding: 0vw 1vw;
+        background-color: #e9e8e9;
+    }
+    select{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: inline-block;
+        border:2px solid #e9e8e9;
+    }
+    button{
+        width: 9vw;
+        height: 2.5vw;
+        background-color: #fccb8d;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+}
+option:hover{
+    height: 3vw;
+    background: #a4a4a4;
+}
+.invalido{
+    border: 3px rgb(211 17 17) solid !important;
+}
+.popUpValido{
+    right: 10px;
+    bottom: 10px;
+    color: #1d6d40;
+    background-color: #72d19b;
+    height: 60px;
+    width: 220px;
+    border-radius: 10px;
+    border: #1d6d40 2px solid;
+    p{
+        font-weight: 500 !important;
+        color: #1d6d40;
+    }
+}
+.popUpInvalido{
+    right: 10px;
+    bottom: 10px;
+    color: #6d1d1d;
+    background-color: #d17272;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 10px;
+    border: #6d1d1d 2px solid;
+    p{
+        font-weight: 500 !important;
+        color: #6d1d1d;
+    }
+}
+.element6{
+    grid-column: 1/3;
+    grid-row: 7/9;
+    height: 90px;
+    width: $ancho100;
+    padding: 0px 50px;
+}
+.terminosYCondiciones{
+    flex-flow: row;
+}
+.derechos{
+    height: $alto100;
+    background-color: black;
+    display: flex;
+    padding: 0px 3vw;
+    align-items: center;
+}
+/* ANIMACIONES */
+@keyframes desplazarD {
+    0%{
+        margin-left: -4000px;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+
+@keyframes desplazarI {
+    0%{
+        margin-right: -4000px;
+    }
+    100%{
+        margin-right: 0;
+    }
+}
+
+/* QUERYS */
+@media(min-width:1611px){
+    .terminosYCondiciones{
+        label{
+            padding-left: 1vw;
+        }
+    }
+}
+@media(max-width:1610px){
+    
+    .bgP{
+        padding: 0px 200px ;
+    }
+    .titulo1 {
+        height: 50px;
+        width: 190px;
+        border-left: 2px solid white;
+    }
+    .section2Imgs{
+        margin-top: -170px;
+        height: 59vw;
+    }
+    .titulo2{
+        height: 60px;
+        width: 300px;
+        img{
+            width: 270px;
+        }
+    }
+    .img2{
+        margin-top: 130px;
+    }
+    .textImagenes{
+        width: 43vw;
+        font-size: 23px;
+    }
+    .pTextImagenes{
+        padding: 0px 200px;
+    }
+    .gridUltimaSection{
+        padding: 0px 200px;
+    }
+    .terminosYCondiciones{
+        font-size: 1vw;
+        label{
+            padding-left: 1vw;
+        }
+    }
+}
+@media(max-width:1376px){
+    .contenido1{
+        p{
+            font-size: 15px;
+        }
+    }
+    .bgP{
+        padding: 0px 100px ;
+    }
+    .section2Imgs{
+        margin-top: -125px;
+        height: 59vw;
+    }
+    .img2{
+        margin-top: 7vw;
+    }
+    .textImagenes{
+        width: 50vw;
+        font-size: 23px;
+    }
+    .pTextImagenes{
+        padding: 0px 100px;
+    }
+    .element4{
+        padding-right: 105px;
+    }
+    .element5{
+        h2{
+            font-size: 2vw;
+        }
+        p{
+            font-size: 1.5vw;
+        }
+        input, select{
+            height: 4vw;
+            font-size: 14px;
+        }
+        button{
+            width: 13vw;
+            height: 4vw;
+        }
+    }
+}
+@media(max-width:1045px){
+    .contenedor{
+        margin-top: 51px;
+    }
+    .contenido1{
+        height: 120px;
+        p{
+            font-size: 14px;
+        }
+    }
+    .section2Imgs{
+        margin-top: -110px;
+        height: 60vw;
+    }
+    .textImagenes{
+        width: 50vw;
+        font-size: 20px;
+    }
+    .pTextImagenes{
+        padding: 0px 50px;
+    }
+    .cuadros{
+        margin-top: -3vw;
+    }
+    .gridUltimaSection{
+        padding: 0px 100px;
+    }
+}
+@media(max-width:965px){
+    .titulo2,.contenido1{
+        width: $ancho100;
+        margin-left: 0;
+    }
+    .section2Imgs{
+        margin-top: -35px;
+        height: 67vw;
+    }
+    .img1{
+        /*width: 800px;*/
+        width: 43vw;
+        margin-top: -167px;
+        margin-left: -27px;
+    }
+    .img2{
+        width: 13vw;
+        margin-top: 2vw;
+        margin-left: -50px;
+    }
+    .img3{
+        /*width: 1140px;*/
+        width: 62vw;
+    }
+    .textImagenes{
+        width: 50vw;
+        font-size: 16px;
+    }
+    .pTextImagenes{
+        padding: 0px 50px;
+    }
+    .cuadros{
+        margin-top: -7vw;
+    }
+    .element1{
+        font-size: 1.3vw;
+    }
+    .element2{
+        font-size: 1.3vw;
+        padding: 0vw 3vw 0px 3vw;
+    }
+    .element4{
+        h2{
+            font-size: 2vw;
+        }
+        p{
+            font-size: 1.3vw;
+        }
+    }
+    .gridUltimaSection{
+        padding: 0px 50px;
+    }
+    .element5{
+        h2{
+            font-size: 2.5vw;
+        }
+        p{
+            font-size: 1.5vw;
+        }
+        form{
+            grid-template-columns: 100%;
+            gap: 0.5rem;
+        }
+        input, select{
+            height: 7vw;
+            padding: 0vw 1vw;
+            font-size: 14px;
+        }
+        button{
+            width: 30vw;
+            height: 6vw;
+        }
+    }
+    .terminosYCondiciones{
+        flex-flow: column;
+        height: 12vw !important;
+        font-size: 12px;
+    }
+    .popUpValido{
+        height: 50px;
+        width: 165px;
+        p{
+            font-size: 13px;
+        }
+    }
+}
+@media(max-width:700px){
+    .section2Imgs{
+        margin-top: -30px;
+        height: 109vw;
+    }
+    .img2{
+        margin-top: -2vw;
+    }
+    .img1{
+        /*width: 800px;*/
+        width: 80vw;
+        margin-top: -167px;
+        margin-left: 0;
+
+    }
+    .img2{
+        width: 20vw;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .img3{
+        /*width: 1140px;*/
+        width: 95vw;
+    }
+    .textImagenes{
+        width: 60vw;
+        font-size: 15px;
+    }
+    .pTextImagenes{
+        padding: 0px 50px;
+    }
+    .cuadros{
+        margin-top: -17vw;
+    }
+    .element1{
+        padding: 0px 10px;
+    }
+    .gridUltimaSection{
+        padding: 0px 0px;
+    }
+    .element1{
+        font-size: 13px;
+        grid-row: 1/2;
+        @include textoCentrado();
+    }
+    .element1,.element4{
+        grid-column: 1/3;
+    }
+    .element2{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        font-size: 11px;
+    }
+    .element3{
+        grid-row: 2/4;
+        grid-column: 1/2;
+        img{
+            width: 40vw;
+        }
+    }
+    .imgInfo{
+        height: 62vw;
+    }
+    .element4{
+        grid-row: 9/12;
+        padding: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 100%);
+        padding: 20px 0px;
+        h2{
+            font-size: 3.5vw;
+            @include textoCentrado();
+            font-weight: 500;
+            color: white;
+        }
+        p{
+            font-size: 2.5vw;
+            letter-spacing: 1.5px;
+            color: white;
+            padding: 5px 10px;
+        }
+    }
+    .element5{
+        grid-row: 12/14;
+        h2 {
+            font-size: 3vw;
+        }
+        p{
+            font-size: 2vw;
+        }
+    }
+    .element6{
+        grid-row: 14/16;
+    }
+}
+@media(max-width:580px){
+    .section2Imgs{
+        margin-top: -25px;
+        height: 114vw;
+    }
+    .gridUltimaSection{
+        padding: 0px 0px;
+    }
+    .element1,.element2,.element3{
+        padding: 0px 20px;
+    }
+    .element2{
+        @include textoCentrado();
+    }
+    .element4{
+        @include textoCentrado();
+    }
+    .element5{
+        form{
+            grid-template-columns: 100%;
+            gap: 0.5rem;
+        }
+        input, select{
+            height: 9vw;
+            padding: 0vw 1vw;
+            font-size: 12px;
+        }
+        button{
+            width: 40vw;
+            height: 8vw;
+        }
+        h2{
+            font-size: 3.5vw;
+        }
+        p{
+            font-size: 2.5vw;
+        }
+    } 
+    .element6{
+        padding: 0px 0px;
+    }
+    .terminosYCondiciones{
+        flex-flow: column;
+        height: 17vw !important;
+        font-size: 12px;
+    }
+    .popUpValido{
+        height: 50px;
+        width: 130px;
+        padding-left: 10px;
+        top: 60px;
+        p{
+            font-size: 13px;
+            @include textoCentrado();
+        }
+    }
+}
+@media(max-width:500px){
+    .titulo1{
+        height: 50px;
+        width: 125px;
+        p{
+            font-size: 12px;
+        }
+    }
+    .titulo2{
+        height: 40px;
+        img{
+            width: 200px;
+        }
+    }
+    .contenido1{
+        width: $ancho100;
+        height: 100px;
+        p{
+            font-size: 12px;
+        }
+    }
+    .bgP{
+        padding: 0px 20px;
+    }
+    .section2Imgs{
+        margin-top: -30px;
+        height: 142vw;
+    }
+    .img1{
+        /*width: 800px;*/
+        width: 90vw;
+        margin-top: -167px;
+        margin-left: 0;
+    }
+    .img2{
+        width: 27vw;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .img3{
+        /*width: 1140px;*/
+        width: 95vw;
+    }
+    .textImagenes{
+        width: 75vw;
+        font-size: 12px;
+    }
+    .pTextImagenes{
+        padding: 0px 40px;
+    }
+    .cuadros{
+        margin-top: -20vw;
+    }
+    .imgInfo{
+        height: 80vw;
+    }
+    .element1{
+        font-size: 11px;
+        letter-spacing: 2px;
+        padding: 10px 10px;
+        grid-row: 1/3;
+        height: 20vw;
+    }
+    .element3{
+        grid-column: 1/3;
+        grid-row: 3/7;
+    }
+    .imgGrid{
+        width: 45vw !important;
+    }
+    .element2{
+        grid-column: 1/3;
+        grid-row: 7/9;
+        padding: 5vw 3vw 5vw 3vw;
+        letter-spacing: 1vw;
+        p {
+            color: black !important;
+        }
+    }
+    .gridUltimaSection{
+        padding: 0;
+    }
+    .element4{
+        padding: 20px 0px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(45,45,45,1) 100%);
+        h2{
+            font-size: 4vw;
+            @include textoCentrado();
+            font-weight: 500;
+            color: white;
+        }
+        p{
+            font-size: 3vw;
+            letter-spacing: 1.5px;
+            color: white;
+            padding: 5px 10px;
+        }
+    }
+    .element5{
+        padding: 0px 30px;
+        h2{
+            font-size: 5vw;
+        }
+        p{
+            font-size: 4vw;
+        }
+        form{
+            grid-template-columns: 100%;
+            gap: 0.5rem;
+        }
+        input, select{
+            height: 12vw;
+            padding: 0vw 1vw;
+            font-size: 12px;
+        }
+        button{
+            width: 40vw;
+            height: 10vw;
+        }
+    }
+    .element6{
+        padding: 0px 0px;
+    }
+    .terminosYCondiciones{
+        flex-flow: column;
+        height: 24vw !important;
+        font-size: 12px;
+    }
+}
