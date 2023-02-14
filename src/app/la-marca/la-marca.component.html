@@ -57,7 +57,6 @@
                         placeholder="NOMBRE:" 
                         formControlName="nombre" 
                         title="Ingrese un nombre"
-                        pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ']"
                         minlength="1"
                         [ngClass]="{'invalido':this.formularioSuscripcion.controls['nombre'].invalid && this.formularioSuscripcion.controls['nombre'].touched}">
                     <!--Campo Correo-->
